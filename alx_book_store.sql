@@ -10,6 +10,10 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 mycursor.execute("""
+CREATE DATABASE IF NOT EXISTS alx_book_store
+""")
+
+mycursor.execute("""
 CREATE TABLE IF NOT EXISTS Authors(
     author_id INT AUTO_INCREMENT PRIMARY KEY,
     author_name VARCHAR(215)                
